@@ -163,4 +163,6 @@ sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) wi
 ## Screenshots
 
 ![Screenshot 1](./grafana.png)
-
+![Screenshot 2](./grafana2.png)
+![Screenshot 3](./grafana3.png)
+![Screenshot 4](./grafana4.png)
