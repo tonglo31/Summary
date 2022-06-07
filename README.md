@@ -54,6 +54,8 @@ Grafana::3000
 
 
 
+
+
     
 ## Grafana - Overview
 QPS: update every 5mins \
@@ -156,3 +158,9 @@ rate(mysql_global_status_questions[TIME]) OR
 sum(rate(mysql_global_status_commands_total{command=~"select|insert"}[TIME])) without (command)
 sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) without (command)
 ```
+
+
+## Screenshots
+
+![Screenshot 1](./grafana.png)
+
