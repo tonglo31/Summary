@@ -204,3 +204,59 @@ which openssl
 [leele3@] openssl version
 OpenSSL 3.0.3 3 May 2022 (Library: OpenSSL 3.0.3 3 May 2022)
 ```
+
+## Install Python
+
+### Step1. Extract tarball
+``` bash
+tar -zxvf Python-3.?.?.tar.xz
+```
+
+### Step2. Enable SSL by default
+``` bash
+vi ./Python-3*/Modules/Setup.dist
+```
+
+### Step3. Search for “SSL” and uncomment the code as shown below
+``` bash
+_socket socketmodule.c
+# Socket module helper for SSL support; you must comment out the other
+# socket line above, and possibly edit the SSL variable:
+SSL=/opt/openssl
+_ssl _ssl.c \
+ -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+ -L$(SSL)/lib -lssl -lcrypto
+```
+
+### Step4. Configure python installation script
+``` bash
+cd {Python script path}
+make
+sudo make altinstall or install
+```
+
+### Step5. Check for ssl support
+``` bash
+python3.6
+import ssl
+```
+
+### Step6. If ssl import error still existing (Optional)
+This normally happened when multiple openssl version installed
+Need to customize Python3 setup script
+1. Modify python3 setup.py following this [link](https://gist.github.com/eddy-geek/9604982)
+2. Configure Python3 installation script again
+``` bash
+cd {python script directory}
+./configure --with-openssl=/opt/ (no need openssl directory)
+make 
+sudo make altinstall or install
+```
+
+### Step7. Install vmware exporter
+1.download release from [github page](https://github.com/pryorda/vmware_exporter)
+2.extract tarball
+``` bash
+sudo env "PATH=$PATH" python3.6 setup.py install
+```
+
