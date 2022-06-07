@@ -193,7 +193,7 @@ sudo make install
 export PATH=/opt/openssl/bin:$PATH
 export LD_LIBRARY_PATH=/opt/openssl/lib64
 export LC_ALL="en_US.UTF-8"
-export LDFLAGS="-L /opt/openssl/lib64 -Wl,-rpath,/opt/openssl/lib"
+export LDFLAGS="-L /opt/openssl/lib64 -Wl,-rpath,/opt/openssl/lib64"
 . ~/.bash_profile
 ``` 
 
