@@ -166,3 +166,41 @@ sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) wi
 ![Screenshot 2](./grafana2.png)
 ![Screenshot 3](./grafana3.png)
 ![Screenshot 4](./grafana4.png)
+
+## VMWARE exporter for later
+
+### installation
+Requirements: >=Python 3.6, newest openssl
+1.download python3 source from [offical website](https://www.python.org/downloads/source/)
+2.download openssl source from [offical website](https://www.openssl.org/source/)
+``` bash
+sudo yum install zlib-devel perl-Test-Simple 
+tar zxvf openssl-*.tar.gz
+cd cd openssl-*
+./config --prefix=/opt/openssl --openssldir=/opt/openssl no-ssl2
+make
+make test
+```
+
+If Failed test 'running ssl_test 12-ct.cnf' occured, ignore it (fix in next patch)
+``` bash
+sudo make install
+```
+
+### Add to PATH environment
+1.Find out the name of openssl lib directory (lib64/lib)
+``` bash
+export PATH=/opt/openssl/bin:$PATH
+export LD_LIBRARY_PATH=/opt/openssl/lib64
+export LC_ALL="en_US.UTF-8"
+export LDFLAGS="-L /opt/openssl/lib64 -Wl,-rpath,/opt/openssl/lib"
+. ~/.bash_profile
+``` 
+
+### Confirm openssl installation
+``` bash
+which openssl
+/opt/openssl/bin/openssl
+[leele3@] openssl version
+OpenSSL 3.0.3 3 May 2022 (Library: OpenSSL 3.0.3 3 May 2022)
+```
