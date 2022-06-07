@@ -170,8 +170,8 @@ sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) wi
 ## VMWARE exporter for later
 
 ### installation
-Requirements: >=Python 3.6, newest openssl
-1.download python3 source from [offical website](https://www.python.org/downloads/source/)
+Requirements: >=Python 3.6, newest openssl \
+1.download python3 source from [offical website](https://www.python.org/downloads/source/)\
 2.download openssl source from [offical website](https://www.openssl.org/source/)
 ``` bash
 sudo yum install zlib-devel perl-Test-Simple 
@@ -231,6 +231,7 @@ _ssl _ssl.c \
 ### Step4. Configure python installation script
 ``` bash
 cd {Python script path}
+./configure
 make
 sudo make altinstall or install
 ```
