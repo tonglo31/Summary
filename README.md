@@ -254,7 +254,7 @@ sudo make altinstall or install
 ```
 
 ### Step7. Install vmware exporter
-1.download release from [github page](https://github.com/pryorda/vmware_exporter)
+1.download release from [github page](https://github.com/pryorda/vmware_exporter) \
 2.extract tarball
 ``` bash
 sudo env "PATH=$PATH" python3.6 setup.py install
