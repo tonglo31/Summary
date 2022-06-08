@@ -3,7 +3,7 @@
 
 Detailed steps and solutions for installing prometheus and grafana on the testing server.
 ## What we did during the inernship
-1. [Grafana & Prometheus Integration](#example)
+1. [Grafana & Prometheus Integration](https://github.com/tonglo31/Summary/blob/main/README.md)
 2. [Dashboard Design](#example2)
 
 
