@@ -1,10 +1,15 @@
 
 ## VMWARE exporter for later
 
-### installation
-Requirements: >=Python 3.6, newest openssl \
-1.download python3 source from [offical website](https://www.python.org/downloads/source/)\
-2.download openssl source from [offical website](https://www.openssl.org/source/)
+### Table of Content
+1. [Install Openssl](#install-openssl)
+2. [Install Python](#install-python)
+3. [References](#references)
+
+### Install openssl
+Requirements: >=Python 3.6, newest openssl
+1. Download python3 source from [offical website](https://www.python.org/downloads/source/)
+2. Download openssl source from [offical website](https://www.openssl.org/source/)
 ``` bash
 sudo yum install zlib-devel perl-Test-Simple 
 tar zxvf openssl-*.tar.gz
@@ -92,4 +97,11 @@ sudo make altinstall or install
 ``` bash
 sudo env "PATH=$PATH" python3.6 setup.py install
 ```
+
+### References
+1. [Openssl Requirement](https://mta.openssl.org/pipermail/openssl-dev/2016-January/003936.html)
+2. [Install Python3 on Redhat](https://programmer.group/install-python3-in-centos7.html)
+3. [VMware exporter](https://github.com/pryorda/vmware_exporter)
+4. [Setup.py modify](https://gist.github.com/eddy-geek/9604982)
+5. [Coredump when compiling python with a custom openssl version](https://stackoverflow.com/questions/22409092/coredump-when-compiling-python-with-a-custom-openssl-version)
 
