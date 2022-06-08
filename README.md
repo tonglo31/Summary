@@ -11,6 +11,8 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 2. [Prometheus Configuration](#configure-prometheus-for-linux-service)
 3. [Enable Service for Prometheus and Grafana](#enable-service)
 4. [Import Grafana Dashboard - Leeman](#dashboard---leeman)
+5. [Screenshots - Leeman]()
+6. [References]()
 
 
 ## Installation
@@ -76,7 +78,7 @@ Grafana::3000
 ```
 
 ## Dashboard - Leeman
-1. Download JSON file from github release page
+1. Download JSON file from [github release page](https://github.com/tonglo31/Summary/releases)
 2. Go to domain:3000/dashboard/import
 3. Upload JSON file
 
