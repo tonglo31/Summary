@@ -11,7 +11,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 2. [Prometheus Configuration](#configure-prometheus-for-linux-service)
 3. [Enable Service for Prometheus and Grafana](#enable-service)
 4. [Import Grafana Dashboard - Leeman](#dashboard---leeman)
-5. [Screenshots - Leeman]()
+5. [Screenshots - Leeman](#screenshots---leeman)
 6. [References]()
 
 
@@ -199,6 +199,15 @@ sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) wi
 ![Screenshot 2](./grafana2.png)
 ![Screenshot 3](./grafana3.png)
 ![Screenshot 4](./grafana4.png)
+
+## References
+1.[Export and import Grafana](https://grafana.com/docs/grafana/latest/dashboards/export-import/)
+2.[Prometheus Book](https://yunlzheng.gitbook.io/prometheus-book/part-ii-prometheus-jin-jie/exporter/commonly-eporter-usage/use-promethues-monitor-mysql)
+3.[Grafana Install on RPM-based Linux](https://grafana.com/docs/grafana/latest/installation/rpm/)
+4.[Prometheus Installation](https://prometheus.io/docs/prometheus/latest/installation/)
+5.[Prometheus Configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/)
+6.[Grafana Configuration](https://grafana.com/docs/grafana/latest/administration/configuration/)
+7.[MySQL server status](https://dev.mysql.com/doc/refman/8.0/en/server-status-variables.html)
 
 ## VMWARE exporter for later
 
