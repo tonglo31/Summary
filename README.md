@@ -7,6 +7,9 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 2. [Dashboard Design](#example2)
 3. [Vmware & Prometheus Integration]()
 
+## Table of Content
+1. [Grafana & Prometheus Installation)(#Installation)
+
 
 ## Installation
 
