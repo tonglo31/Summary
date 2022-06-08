@@ -1,5 +1,6 @@
 # Getting started
 last guide is `Grafana_Installation.md`
+The version of those guide and photo is 8.5.4
 ## View the page
 After starting server, the default domain is `localhost` HTTP port is 3000.  
 You can go to Grafana page though `http://localhost:3000/`  
