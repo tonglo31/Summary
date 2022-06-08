@@ -14,7 +14,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 ## Installation
 Since the testing server does not have docker environment, so we built and used the released binary for installation.
 
-Install Prometheus from [link - Install from binary .tar.gz file
+Install Prometheus from [link
 ](https://prometheus.io/download/)
 
 ```bash
@@ -22,7 +22,7 @@ Install Prometheus from [link - Install from binary .tar.gz file
   sudo mv prometheus-*.linux-amd64 /opt/
 ```
 
-Install Grafana [link]()
+Install Grafana [link - Install from binary .tar.gz file](https://grafana.com/docs/grafana/latest/installation/rpm/#install-from-binary-targz-file)
 ```bash
   tar -zxvf grafana-enterprise-8.5.4.linux-amd64.tar.gz
 ```
