@@ -10,7 +10,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 1. [Grafana & Prometheus Installation](#Installation)
 2. [Prometheus Configuration](#configure-prometheus-for-linux-service)
 3. [Enable Service for Prometheus and Grafana](#enable-service)
-4. [Import Grafana Dashboard - Leeman]()
+4. [Import Grafana Dashboard - Leeman](#dashboard---leeman)
 
 
 ## Installation
@@ -76,16 +76,21 @@ Grafana::3000
 ```
 
 ## Dashboard - Leeman
-1.Download JSON file from github release page
-2.Go to domain:3000/dashboard/import
+1.Download JSON file from github release page \ 
+2.Go to domain:3000/dashboard/import \ 
 3. Upload JSON file
 
 
 
     
 ## Grafana - Overview
-QPS: update every 5mins \
-Buffer Pool Size
+1.MySQL Uptime: Show server uptime
+2.Current QPS: Queries per second (update every 5 mins)
+3.Buffer pool size
+4.Network
+5.Perfomance
+6.MySQL connection
+7.MySQL Queries
 
 ``` bash
 MySQL uptime: mysql_global_status_uptime
@@ -186,7 +191,7 @@ sum(rate(mysql_global_status_commands_total{command=~"delete|update"}[TIME])) wi
 ```
 
 
-## Screenshots
+## Screenshots - Leeman
 
 ![Screenshot 1](./grafana.png)
 ![Screenshot 2](./grafana2.png)
