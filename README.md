@@ -76,20 +76,20 @@ Grafana::3000
 ```
 
 ## Dashboard - Leeman
-1. Download JSON file from github release page \
-2. Go to domain:3000/dashboard/import \
+1. Download JSON file from github release page
+2. Go to domain:3000/dashboard/import
 3. Upload JSON file
 
 
 
     
 ## Grafana - Overview
-1. MySQL Uptime: Show server uptime \
-2. Current QPS: Queries per second (update every 5 mins) \
-3. Buffer pool size \
-4. Network \
-5. Perfomance \
-6. MySQL connection \
+1. MySQL Uptime: Show server uptime
+2. Current QPS: Queries per second (update every 5 mins)
+3. Buffer pool size
+4. Network
+5. Perfomance
+6. MySQL connection
 7. MySQL Queries
 
 ``` bash
