@@ -1,5 +1,11 @@
-The version of those guide and photo is 8.5.4
-# Create a new dashboard
+The version of those guide and photo is 8.5.4  
+- [Create a new dashboard](#create-a-new-dashboard)
+    - [Create a new panel](#create-a-new-panel)  
+        - [Select data by query](#select-data-by-query)  
+        - [Change visualization](#change-visualization)  
+        - [Field name](#field-name)  
+
+# Create a new dashboard  
 Click `Add(icon) > Create > Dashboard`  
 ![image](https://user-images.githubusercontent.com/71573064/172528427-88dbaee8-bb58-48b3-b94e-8f22dda91127.png)  
 ## Create a new panel
@@ -18,7 +24,7 @@ Change the visualization though clicking the option on the top right![image](htt
 
 ![image](https://user-images.githubusercontent.com/71573064/172529230-9efd2248-c2f3-436e-bb39-5f1f8ab699d2.png)
 
-### field name
+### Field name
 In default, fields will be shown completely:  
 ![image](https://user-images.githubusercontent.com/71573064/172529823-9285fa7c-2240-4029-ba44-b940d7cbca7b.png)  
 We can modify the field name in `Standard options > Display name`.  
