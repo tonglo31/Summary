@@ -75,7 +75,10 @@ Prometheus::9090/
 Grafana::3000
 ```
 
-
+## Dashboard - Leeman
+1.Download JSON file from github release page
+2.Go to domain:3000/dashboard/import
+3. Upload JSON file
 
 
 
