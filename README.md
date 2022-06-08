@@ -9,6 +9,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 
 ## Table of Content
 1. [Grafana & Prometheus Installation](#Installation)
+2. [Prometheus Configuration](#Configure Prometheus for Linux Service)
 
 
 ## Installation
@@ -28,7 +29,18 @@ Install Grafana [link - Install from binary .tar.gz file](https://grafana.com/do
 ```
 
 ## Configure Prometheus for Linux Service
+Configure a Linux service to restart automatically after a reboot or crash using systemctl.
 
+The configuration file depends on where you would like to put.
+For me, I put it inside the installation directory.
+
+## Open the configuration file/create a new one(prometheus.yml).
+``` bash
+touch /opt/prometheus/prometheus.yml.
+vi /opt/prometheus/prometheus.yml
+```
+## Modify the file as shown as below
+Note that ExecStart --config.file need to change where the configuration file is.
 ```bash
 [Unit]
 Description=Prometheus Server
