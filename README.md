@@ -9,7 +9,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 
 ## Table of Content
 1. [Grafana & Prometheus Installation](#Installation)
-2. [Prometheus Configuration](#Configure Prometheus for Linux Service)
+2. [Prometheus Configuration](#configure-prometheus-for-linux-service)
 
 
 ## Installation
