@@ -67,7 +67,7 @@ sudo systemctl reload-daemon
 sudo systemctl start prometheus
 cd /opt/grafana-?.?.?
 sudo systemctl start grafana-server
-sudo systemctl enable grafana-serveer
+sudo systemctl enable grafana-server
 sudo systemctl enable prometheus
 ```
 
