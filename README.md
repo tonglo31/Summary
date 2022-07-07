@@ -2,9 +2,10 @@
 # Prometheus & Grafana 
 
 Detailed steps and solutions for installing prometheus and grafana on the testing server.
-## What we did during the inernship
+## Record of done
 1. [Grafana & Prometheus Integration](https://github.com/tonglo31/Summary/blob/main/README.md)
 2. [Vmware & Prometheus Integration](https://github.com/tonglo31/Summary/blob/main/VmwareExporter.md)
+3. [Kafka & JMX]
 
 ## Table of Content
 1. [Grafana & Prometheus Installation](#Installation)
