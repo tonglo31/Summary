@@ -26,6 +26,9 @@ Total Number of active Controllers
 ``` bash
 sum(kafka_cluster_partition_underreplicated)
 ```
+```
+sum(kafka_controller_kafkacontroller_activecontrollercount)
+```
 
 **Unhealthy: ```If sum is not equal 1 is not normal ```**
 ##
@@ -92,6 +95,51 @@ or irate(kafka_server_brokertopicmetrics_bytesin_total[5m]))))
 Rank top5 Message received
 ``` bash
 topk(5, sum by(topic)(rate(kafka_server_brokertopicmetrics_messagesin_total[5m])))
+```
+
+--------------------------------------
+### Available Broker Count
+```
+count(kafka_server_kafkaserver_brokerstate{pod=~"$Pod"})
+```
+
+### Number of Partitions per broker
+```
+kafka_server_replicamanager_partitioncount{pod=~"$Pod"}
+```
+
+### Number of Leader per broker
+```
+kafka_server_replicamanager_leadercount{pod=~"$Pod"}
+```
+
+###Network Processor NOT idle
+
+Average fraction of time the network processor threads are idle
+```
+1- avg(kafka_network_processor_idle_percent{pod=~"$Pod"}) by (pod)
+```
+
+### Request Network Errors
+```
+sum by (pod)(irate(kafka_network_requestmetrics_errors_total{pod=~"$Pod"}[5m]))
+```
+
+### Socket Connection Count
+```
+sum(kafka_server_socket_server_metrics_connection_count{pod=~"$Pod"}) by (pod)
+```
+
+### Purgatory Size
+PurgatorySize: Number of requests waiting in producer purgatory, Number of requests waiting in fetch purgatory
+```
+sum(kafka_server_delayedoperationpurgatory_purgatorysize{pod=~"$Pod"}) by (delayedOperation)
+```
+
+### Socket IO wait time
+The average length of time the I/O thread spent waiting for a socket ready for reads or writes in nanoseconds.
+```
+avg(kafka_server_socket_server_metrics_io_wait_time_ns_avg) by (pod)
 ```
 
 ## 2. Consumer
