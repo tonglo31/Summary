@@ -5,7 +5,7 @@ Detailed steps and solutions for installing prometheus and grafana on the testin
 ## Record of done
 1. [Grafana & Prometheus Integration](https://github.com/tonglo31/Summary/blob/main/README.md)
 2. [Vmware & Prometheus Integration](https://github.com/tonglo31/Summary/blob/main/VmwareExporter.md)
-3. [Kafka & JMX]
+3. [Kafka & JMX](https://github.com/tonglo31/Summary/blob/main/Kafka.md)
 
 ## Table of Content
 1. [Grafana & Prometheus Installation](#Installation)

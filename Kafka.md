@@ -7,16 +7,16 @@
 3. Upload JSON file
 
 ## Table of Content
-1. [Kafka](#Installation)
-2. [JMX Exporter](#configure-prometheus-for-linux-service)
+1. [Kafka](#1-kafka-system-metrics)
+2. [JMX Exporter](#jmx-exporter)
 3. [References](#references)
 
 
 ##  Overview
-1. [Kafka_System_Metrics]
-2. [Consumer]
-3. [Producer]
-4. [Process/Host]
+1. [Kafka_System_Metrics](#1-kafka-system-metrics)
+2. [Consumer](#2-consumer)
+3. [Producer](#3-producer)
+4. [Process/Host](#4-processhost)
 
 ## 1. Kafka System Metrics
 
@@ -93,8 +93,20 @@ Rank top5 Message received
 ``` bash
 topk(5, sum by(topic)(rate(kafka_server_brokertopicmetrics_messagesin_total[5m])))
 ```
-
 ## 2. Consumer
+
+### Max Lag
+Monitor the records-lag-max metric from the Java consumer
+```bash
+max(kafka_server_replicafetchermanager_maxlag)
+```
+### Current Offset Delay of a ConsumerGroup
+consumer message rate
+```bash
+rate(kafka_consumergroup_current_offset[1m])
+```
+
+## 3. Producer
 
 ### Average Request Latency
 ``` bash
@@ -129,7 +141,7 @@ calculation not sure
 sum(rate(container_cpu_user_seconds_total{namespace=~".*kafka.*"}[30s])) * 100
 ```
 
-## 3. Process/Host
+## 4. Process/Host
 
 ### Opened Files
 
@@ -154,3 +166,7 @@ Rank top 10 log size
 ``` bash
 topk(10, kafka_log_log_size{container="kafka"})
 ```
+## References
+1. [Monitoring Kafka performance metrics](https://www.datadoghq.com/blog/monitoring-kafka-performance-metrics/)
+2. [Monitoring Kafka](https://docs.confluent.io/platform/current/kafka/monitoring.html)
+3. [Kafka Apache](https://kafka.apache.org/documentation/)
